@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body class={{ page.body_class }}>
+
+    {% if site.use_facebook_page %}
+    <div id="fb-root"></div>
+    {% endif %}
+    <main class="wrap">
+      {% include navigation.html %}
+      <div class="main-content">
+        {{ content }}
+      </div>
+
+      {% if page.free_download %}
+        {% assign free_download_class = page.free_download_class %}
+        {% include free-download.html class=free_download_class %}
+      {% endif %}
+
+      {% include footer.html %}
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ site.url }}/js/init.js"></script>
+  </body>
+</html>

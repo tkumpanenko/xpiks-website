@@ -1,0 +1,15 @@
+- title: "Tutorials"
+  href: "/tutorials/"
+
+#- title: "Plugins"
+#  href: "/mg-plugin/"
+
+- title: "Blog"
+  href: "/blog/"
+
+- title: "Support"
+  href: "/support/"
+
+- title: "Free download"
+  href: "/downloads/"
+  higlight: true

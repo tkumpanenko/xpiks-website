@@ -1,0 +1,76 @@
+.pagination {
+	clear: both;
+
+	margin: 0 auto 35px;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+	.row {
+		margin: 0;
+	}
+	@media screen and (min-width: 64.063em) {
+		margin-bottom: 70px;
+		padding-left: 0rem;
+		padding-right: 0rem;
+
+	}
+	.pagination-prev,
+	.pagination-next {
+		min-height: 1px;
+		float: left;
+		font-size: 16px;
+		font-weight: bold;
+		a {
+			position: relative;
+			text-decoration: none;
+			display: inline-block;
+			&:hover {
+				color: $btn-bg-hover-color !important;
+				path,
+				polyline {
+					fill: $btn-bg-hover-color !important;
+					stroke: $btn-bg-hover-color !important;
+				}
+			}
+			&:visited {
+				color: $btn-bg-color;
+				path,
+				polyline {
+					fill: $btn-bg-color;
+					stroke: $btn-bg-color;
+				}
+			}
+		}
+		svg {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	.pagination-prev {
+		a {
+			padding-left: 20px;
+		}
+		svg {
+			left: 0;
+		}
+	}
+	.pagination-next {
+		text-align: right;
+		a {
+			padding-right: 20px;
+		}
+		svg {
+			right: 0;
+		}
+
+	}
+}
+
+@media screen and (min-width: 64.063em) {
+	.signle-post-pagination-wrapper {
+		width: 1000px;
+		margin: auto;
+		padding-left: 100px;
+		padding-right: 150px;
+	}
+}

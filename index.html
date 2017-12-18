@@ -1,0 +1,75 @@
+---
+layout: default
+title: Xpiks is a free and open source keywording and uploading tool
+free_download: true
+body_class: "page-home"
+---
+<!-- hero -->
+<section class="section-hero">
+	<div class="row">
+		<div class="small-12 columns">
+			<img class="hero-image" src="images/logo-big.png" alt="xpiks">
+			<h1 class="hero-title">Xpiks is a free and open source keywording and uploading tool</h1>
+			<p class="hero-sub-title">for microstock photographers and illustrators.</p>
+			<a class="button" href="{{site.url}}/downloads/">Free download</a>
+		</div>
+	</div>
+</section>
+<!-- /hero -->
+
+<!-- feature -->
+<section class="section-features">
+	<div class="row feature-top-row">
+		<div class="small-12 columns">
+			<img src="images/features/photo-vector-video.svg" alt="">
+			<h2 class="section-title">Photo, vector, video</h2>
+			<p>Xpiks support all your works - photo, vectors and video <br/>
+				Mission is to provide microstock photographers and illustrators with free tool for everyday work over all major platforms <br/>
+				(Windows, Mac OS X, Linux)
+			</p>
+			<hr/>
+		</div>
+	</div>
+	<div class="row feature-row">
+		{% for feature in site.data.features %}
+		<div class="small-4 columns">
+			<div class="feature-item">
+				<div class="feature-img-w">
+					<img src="images/features/{{feature.icon}}">
+				</div>
+				<h4>{{feature.title}}</h4>
+				<p class="content">{{feature.content}}</p>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</section>
+<!-- /feature -->
+
+<!-- screens -->
+<section class="section-screens">
+	<div class="row">
+		<div class="columns small-12">
+			<img src="images/screens.png" alt="xpiks screenshots">
+		</div>
+	</div>
+</section>
+<!-- /screens -->
+
+<!-- logo -->
+<section class="section-logos">
+	<div class="row">
+		<div class="columns small-12">
+			<h4 class="section-title">Use Xpiks for uploading to stocks with <strong>FTP</strong> support</h4>
+			<hr/>
+		</div>
+	</div>
+	<div class="row logos-row">
+		{% for logo in site.data.microstoks %}
+		<div class="small-12 medium-{{logo.size}} stock-item columns">
+			<img src="images/logos/{{logo.name}}" alt="">
+		</div>
+		{% endfor %}
+	</div>
+</section>
+<!-- /logo -->

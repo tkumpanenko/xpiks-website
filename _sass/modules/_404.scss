@@ -1,0 +1,36 @@
+.page-404 {
+	text-align: center;
+	font-size: 16px;
+	color: #474B54;
+	background: url('../images/bg-grey.png') no-repeat center center / cover;
+	.main-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	h2 {
+		font-size: 18px;
+	}
+
+	.page-404-title {
+		font-size: 150px;
+		line-height: 70px;
+		margin-bottom: 0.75rem;
+		margin-top: 2rem;
+		svg {
+			max-width: 70%;
+		}
+	}
+	@media screen and (min-width: 64.063em) {
+		.page-404-title {
+			font-size: 250px;
+			svg {
+				max-width: 100%;
+			}
+		}
+		h2 {
+			font-size: $font-size-h1;
+		}
+	}
+}

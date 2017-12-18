@@ -1,0 +1,36 @@
+---
+layout: page
+title: Xpiks Blog
+body_class: "blog-page"
+---
+
+{% include header.html %}
+
+<div class="post-list-wrapper">
+  <div class="post-list">
+    {% for post in paginator.posts %}
+      <div class="post-item">
+        <div class="post-date">
+          <strong>{{ post.date | date: "%-d" }}</strong>
+          {{ post.date | date: "%b" }}
+        </div>
+        <h2>
+          <a class="post-link" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+        </h2>
+        <div class="post-content">
+          {{ post.content | strip_html | truncatewords:25 }}
+        </div>
+        <a href="{{ site.url }}{{ post.url }}" class="button">More</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="row signle-post-pagination-wrapper">
+  <div class="small-12">
+    {% include pagination.html %}
+  </div>
+</div>
+
+{% include free-download.html class="section-grey" %}
+

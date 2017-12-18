@@ -1,0 +1,191 @@
+.tutorials-sidebar {
+	border: 2px solid $secondary-color;
+	margin-bottom: 30px;
+	width: 100%;
+	h3 {
+		font-size: 16px;
+		padding: 12px 23px;
+		margin: 0 2px;
+		position: relative;
+		border-bottom: 2px solid $secondary-color;
+		&:after {
+			content: '';
+			border-bottom: 8px solid $secondary-color;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 8px solid transparent;
+			top: 40%;
+			position: absolute;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+			right: 20px;
+		}
+	}
+	&.close {
+		h3 {
+			border-bottom: none;
+			&:after {
+				border-top: 6px solid $secondary-color;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-bottom: 8px solid transparent;
+				top: 60%;
+			}
+		}
+		.tutorial-nav {
+			display: none;
+		}
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		display: block;
+	}
+	li, a {
+		display: block;
+		color: #3E434D;
+		font-weight: bold;
+	}
+	a:hover {
+		background-color: $secondary-color;
+		text-decoration: none;
+	}
+	.tutorial-nav {
+		margin: 0.5rem 0;
+		font-size: 16px;
+		> li.active > a {
+			color: $link-color;
+		}
+		> li > a {
+			padding: 7px 25px;
+		}
+	}
+	.tutorial-sub-nav {
+		font-size: 14px;
+		> li > a {
+			padding: 7px 40px;
+			position: relative;
+		}
+		.active a {
+
+			color: $link-color;
+			&:after {
+				content: '';
+				border-top: 4px solid transparent;
+				border-left: 6px solid $link-color;
+				border-right: 6px solid transparent;
+				border-bottom: 4px solid transparent;
+				position: absolute;
+				top: 49%;
+				left: 25px;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+
+			}
+		}
+	}
+	@media screen and (min-width: 40.063em) {
+		border: none;
+
+		h3 {
+			border-bottom: none !important;
+			font-size: $font-size-h1-small;
+			padding-left: 0;
+			margin-left: 0;
+			padding-top: 0;
+			&:after {
+				display: none;
+			}
+		}
+		.tutorial-nav > li > a {
+			padding-left: 0;
+		}
+		.tutorial-sub-nav > li > a {
+			padding-left: 10px;
+		}
+		.tutorial-sub-nav {
+			.active a {
+				&:after {
+					left: 0;
+				}
+			}
+		}
+		a:hover {
+			background-color: transparent;
+			text-decoration: none;
+			color: #858990;
+		}
+		a:active {
+			color: $link-visited-color;
+		}
+		.tutorial-nav {
+			display: block !important;
+		}
+	}
+	@media screen and (min-width: 40.063em) {
+		border-right: 1px solid $secondary-color;
+		padding-bottom: 3rem;
+		max-height: 700px;
+		overflow-y: auto;
+		h3 {
+			margin-top: 16px;
+		}
+	}
+}
+
+.tutorial-content {
+	h1 {
+		font-size: $font-size-h1-small;
+		@media screen and (min-width: 64.063em) {
+			font-size: $font-size-h1;
+		}
+	}
+	.content-inner {
+		margin-top: 50px;
+		@media screen and (min-width: 64.063em) {
+			margin-top: 100px;
+		}
+	}
+}
+
+.tutorial-overview-list {
+	font-size: 16px;
+	padding-left: 0;
+	margin-left: 0;
+	li {
+		display: block;
+		list-style-type: none;
+	}
+}
+
+@media screen and (min-width: 64.063em) {
+	.section-tuts {
+		> .row {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-webkit-box-pack: stretch;
+			-ms-flex-pack: stretch;
+			justify-content: stretch;
+		}
+		.columns:first-child {
+			margin: 0;
+			float: none;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-webkit-box-pack: stretch;
+			-ms-flex-pack: stretch;
+			justify-content: stretch;
+
+		}
+	}
+}

@@ -1,0 +1,49 @@
+// Base Colors
+$primary-color: #1C2025;
+$primary-text-color: #30333B;
+$secondary-color: #C7CCD3;
+$complimentary-color: #fff;
+
+$body-bg: #fff;
+$body-font-color: #3E434D;
+
+//Button
+$btn-bg-color: #12B9BC;
+$btn-bg-hover-color: #01D4D8;
+$btn-bg-active-color: #00999C;
+$btn-bg-grey-color: #7A7E86;
+$btn-bg-grey-hover-color: #979CA5;
+
+// Links
+$link-color: #00B9BD;
+$link-hover-color: #01D4D8;
+$link-visited-color: #00999C;
+
+// Text
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size: 1.0em;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+// Primary Navbar Settings
+$navbar-height: 60px;
+$navbar-color: $primary-color;
+$navbar-text-color: $secondary-color;
+$navbar-hover-color: #fff;
+$navbar-active-color: $btn-bg-grey-color;
+$navbar-font-size: 18px;
+$navbar-font-family: Helvetica, Arial, sans-serif;
+
+// Socials Navbar Settings
+$socials-font-color: $secondary-color;
+$socials-font-size: 1.5em;
+
+// Utility
+$spacing-unit: 30px;
+
+// Footer
+$footer-color: #979CA5;
+
+//Font
+$font-size-h1: 36px;
+$font-size-h1-small: 24px;

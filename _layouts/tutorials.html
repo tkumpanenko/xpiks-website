@@ -1,0 +1,45 @@
+---
+layout: default
+free_download: true
+free_download_class: section-grey
+---
+
+<div class="section-default section-tuts">
+    <div class="row">
+	<div class="small-12 medium-4 large-3 columns">
+	    <div class="tutorials-sidebar">
+		<h3>Contents</h3>
+		{% assign topics = site.topic | sort: "order" %}
+
+		{% assign groups = site.tutorials | group_by: "topic" %}
+
+		<ul class="tutorial-nav">
+		    {% for topic in topics %}
+		    <li {% if page.url == topic.url %} class="active" {% endif %}>
+			<a href="{{topic.url| prepend: site.baseurl}}">{{ topic.title }}</a>
+			<ul class="tutorial-sub-nav">
+			    {% assign current_topic = groups | where: "name", topic.slug | first %}
+                            {% assign current_posts = current_topic.items | sort: "order" %}
+			    {% for item in current_posts %}
+			    <li {% if page.url == item.url %} class="active" {% endif %}>
+				<a href="{{ item.url | prepend: site.baseurl }}">{{item.title}}</a>
+			    </li>
+			    {% endfor %}
+			</ul>
+		    </li>
+		    {% endfor %}
+		</ul>
+	    </div>
+
+	</div>
+	<div class="small-12 offset-large-1 large-8 medium-8 columns">
+	    <div class="tutorial-content">
+		<h1>{{ page.title}}</h1>
+
+		{{content}}
+
+		{% include pagination.html %}
+	    </div>
+	</div>
+    </div>
+</div>

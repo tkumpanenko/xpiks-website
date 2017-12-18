@@ -1,0 +1,90 @@
+.tab-download-content {
+	max-width: 850px;
+	text-align: center;
+	font-size: 14px;
+	margin: auto;
+	display: none;
+	&.active-tab {
+		display: block;
+	}
+	h2 {
+		font-size: 20px;
+	}
+	.button {
+		margin-top: 1.5rem;
+	}
+	.button ~ span {
+		margin-top: 10px;
+		display: block;
+	}
+	@media screen and (min-width: 64.063em) {
+		font-size: 16px;
+		h2 {
+			font-size: $font-size-h1;
+			margin-top: 20px;
+		}
+
+	}
+}
+
+.section-platforms {
+	text-align: center;
+	h2 a {
+		color: $primary-text-color;
+		&:hover {
+			color: $btn-bg-hover-color;
+			text-decoration: none;
+		}
+		&:active {
+			color: $btn-bg-active-color;
+		}
+
+	}
+}
+
+.tabs-os-buttons-wrapper {
+	border-top: 1px solid #F2F2F6;
+	position: relative;
+	overflow: hidden;
+	@media screen and (min-width: 64.063em) {
+		padding-left: 120px;
+		padding-right: 120px;
+	}
+	&:after {
+		content: '';
+		height: 100%;
+		border-right: 1px solid #F2F2F6;
+		position: absolute;
+		left: 50%;
+		top: 0;
+		display: block !important
+	}
+	.tabs-os-button {
+		font-size: 16px;
+		cursor: pointer;
+		padding-top: 60px;
+		margin-bottom: 70px;
+		@media screen and (min-width: 64.063em) {
+			font-size: $font-size-h1-small;
+		}
+		&.active-tab {
+			display: none;
+		}
+		img {
+			max-height: 70px;
+			width: auto;
+			margin: 0 auto 30px;
+			display: block;
+		}
+		&:hover {
+			color: $btn-bg-hover-color;
+		}
+		&:active {
+			color: $btn-bg-active-color;
+		}
+	}
+	.download-button-wrap {
+		max-width: 155px;
+		display: inline-block;
+	}
+}

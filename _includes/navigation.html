@@ -1,0 +1,40 @@
+<div class="navbar">
+	<div class="row">
+		<div class="columns large-2 show-for-large-up">
+			<a class="navbar-logo" href="{{site.url}}/">
+				<img src="{{site.baseurl}}/images/logo.png" alt="xpiks">
+			</a>
+		</div>
+
+		<nav id="nav" class="columns small-12 large-10">
+			<a class="navbar-logo-mobile hide-for-large-up" href="{{site.url}}/">
+				<img src="{{site.baseurl}}/images/logo.png" alt="xpiks">
+			</a>
+
+			<label for="toggle-checkbox" id="toggle-menu" ></label>
+			<input type="checkbox" id="toggle-checkbox">
+
+			<ul class="primary-nav">
+				{% for nav in site.data.nav %}
+					{% if nav.subcategories != null %}
+					<li class="dropdown">
+						<a href="{{ site.url }}{{ nav.url }}">{{ nav.title }}</a>
+						<ul>
+							{% for subcategory in nav.subcategories %}
+							<li><a href="{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+							{% endfor %}
+						</ul>
+					</li>
+					{% elsif nav.href == page.url | split:'.html' | first %}
+						<li class="active"><a href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a></li>
+					{% elsif nav.higlight %}
+						<li class="higlight"><a href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a></li>
+					{% else %}
+						<li><a href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a></li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</nav>
+
+	</div>
+</div>

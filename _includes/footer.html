@@ -1,0 +1,25 @@
+<footer class="site-footer">
+
+	<div class="row">
+		<div class="small-12 large-7 columns col-right">
+			<nav class="footer-nav">
+				<ul>
+					{% for item in site.data.nav-footer %}
+					<li {% if nav.href == page.url | split: '.html' | first %} class="active" {% endif %}>
+						{% if item.href contains "http://" or item.href contains "https://"  %}
+							<a href="{{item.href}}">{{item.title}}</a>
+						{% else %}
+							<a href="{{site.url}}{{item.href}}">{{item.title}}</a>
+						{% endif %}
+					</li>
+					{% endfor %}
+				</ul>
+			</nav>
+		</div>
+
+		<div class="small-12 large-5 columns">
+			<span class="darkgray">© 2014-{{ 'now' | date: "%Y" }} Taras Kushnir</span>
+		</div>
+	</div>
+
+</footer>

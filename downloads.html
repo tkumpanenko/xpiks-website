@@ -1,0 +1,100 @@
+---
+layout: default
+title: downloads
+permalink: /downloads/
+body_class: "page-downloads"
+---
+
+<header class="page-header">
+	<img class="page-header-logo" src="{{ site.url }}/images/logo-big-shadowed.png" alt="xPiks">
+
+	<div class="row">
+		<div class="small-12">
+
+			<!-- Mac -->
+			<div data-os="mac" class="tab-download-content">
+				<h2>Xpiks for macOS</h2>
+				<p>Download the Xpiks package, unpack and drag'n'drop it to the Applications.</p>
+				<a class="button" href="https://github.com/Ribtoks/xpiks/releases/download/v1.4.2/xpiks-qt-v1.4.2.dmg">Download</a>
+			</div>
+			<!-- /Mac -->
+
+			<!-- windows -->
+			<div data-os="windows" class="tab-download-content">
+				<h2>Xpiks for Windows</h2>
+				<p>Download the Xpiks zip archive, unpack it where you want and it's ready to go.</p>
+				<div class="row">
+					<div class="small-12 medium-offset-1 medium-5 columns">
+						<a class="button"
+							href="https://github.com/ribtoks/xpiks/releases/download/v1.4.2/xpiks-qt-v1.4.2.zip">Download</a>
+						<br/>
+						<span>For Windows 64-bit</span>
+					</div>
+					<div class="small-12 medium-5 columns">
+						<a class="button button-grey"
+							href="https://github.com/ribtoks/xpiks/releases/download/v1.4.2/xpiks-qt-32-v1.4.2.zip">Download</a>
+						<br/>
+						<span>For Windows 32-bit</span>
+					</div>
+					<div class="medium-1 columns"></div>
+				</div>
+			</div>
+			<!-- /windows -->
+
+			<!-- Linux -->
+			<div data-os="linux" class="tab-download-content">
+				<h2>Xpiks for Linux</h2>
+				<p>This is a universal AppImage package. <br/> Download it, allow execution as a program in Properties and open. <br/> Read more about <a href="http://appimage.org/">AppImage here.</a></p>
+				<a class="button" href="https://github.com/Ribtoks/xpiks/releases/download/v1.4.2/xpiks-qt-v1.4.2.AppImage">Download</a>
+			</div>
+			<!-- /Linux -->
+
+		</div>
+	</div>
+
+</header>
+
+<section class="section-platforms section-default">
+	<div class="row">
+		<div class="small-12">
+			<h2><a href="{{site.url}}/blog/2014/building-xpiks-alone">Other platforms</a></h2>
+			<div class="tabs-os-buttons-wrapper">
+				<!-- mac-button -->
+				<div data-os="mac" class="tabs-os-button small-6 columns">
+					<div class="download-button-wrap">
+						<div class="icon">
+							<img src="{{site.url}}/images/os/macos.png" alt="macos">
+						</div>
+						for <strong>macOS</strong>
+					</div>
+				</div>
+				<!-- /mac-button -->
+
+				<!-- windows-button -->
+				<div data-os="windows" class="tabs-os-button small-6 columns">
+					<div class="download-button-wrap">
+						<div class="icon">
+							<img src="{{site.url}}/images/os/windows.png" alt="windows">
+						</div>
+						for <strong>Windows</strong>
+					</div>
+				</div>
+				<!-- /windows-button -->
+
+				<!-- linux-button -->
+				<div data-os="linux" class="tabs-os-button small-6 columns">
+					<div class="download-button-wrap">
+						<div class="icon">
+							<img src="{{site.url}}/images/os/linux.png" alt="linux">
+						</div>
+						for <strong>Linux</strong>
+					</div>
+				</div>
+				<!-- /linux-button -->
+
+			</div>
+		</div>
+	</div>
+</section>
+
+{% include donate.html %}

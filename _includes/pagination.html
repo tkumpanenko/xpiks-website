@@ -1,0 +1,79 @@
+<!-- Pagination links -->
+<div class="pagination">
+	<div class="row">
+		<div class="small-6 pagination-prev">
+			{% if page.layout == "tutorials" or page.layout == "topic" %}
+
+
+				{% for link in site.data.tuts_links %}
+					{% if link == page.url %}
+						{% if forloop.first %}
+							{% assign has_prev = false %}
+							{% assign url_prev = nil %}
+						{% else %}
+							{% assign prev = forloop.index | minus : 2 %}
+							{% assign has_prev = true %}
+							{% assign url_prev = site.data.tuts_links[prev] | prepend: site.url %}
+						{% endif %}
+
+						{% if forloop.last %}
+							{% assign has_next = false %}
+							{% assign url_next = nil %}
+						{% else %}
+							{% assign next = forloop.index %}
+							{% assign has_next = true %}
+							{% assign url_next = site.data.tuts_links[next] | prepend: site.url %}
+						{% endif %}
+					{% endif %}
+
+				{% endfor %}
+
+			{% else %}
+
+				{% assign has_next = paginator.previous_page %}
+				{% assign url_next = paginator.previous_page_path | prepend: site.url %}
+
+				{% assign has_prev = paginator.next_page %}
+				{% assign url_prev = paginator.next_page_path | prepend: site.url %}
+
+				{% if page.previous.url %}
+					{% assign has_prev = page.previous.url %}
+					{% assign url_prev = page.previous.url | prepend: site.url %}
+				{% endif %}
+
+				{% if page.next.url %}
+					{% assign has_next = page.next.url %}
+					{% assign url_next = page.next.url | prepend: site.url %}
+				{% endif %}
+
+			{% endif %}
+			{% if has_prev %}
+			<a href="{{ url_prev }}" class="previous">
+				<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8">
+					<g fill="none" fill-rule="evenodd" stroke="#1FC1C4" stroke-width="2">
+						<path stroke-linecap="square" d="M11 4H3.429"/>
+						<path d="M5 6.828L2.172 4 5 1.172"/>
+					</g>
+				</svg>
+				Previous
+			</a>
+			{% endif %}
+		</div>
+		<div class="small-6 pagination-next">
+
+			{% if has_next %}
+			<a href="{{ url_next }}" class="next">
+				Next
+				<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8">
+					<g fill="none" fill-rule="evenodd" stroke="#1FC1C4" stroke-width="2">
+						<path stroke-linecap="square" d="M1 4h7.571"/><path d="M7 6.828L9.828 4 7 1.172"/>
+					</g>
+				</svg>
+			</a>
+			{% endif %}
+		</div>
+	</div>
+</div>
+
+
+<!-- /Pagination links -->

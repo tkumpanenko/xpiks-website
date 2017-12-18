@@ -1,0 +1,58 @@
+.section-donate,
+.section-free-downloads {
+	padding: 3em 0;
+	text-align: center;
+	p {
+		font-size: 14px;
+	}
+	@media screen and (min-width: 64.063em) {
+		padding: 4em 0;
+		text-align: left;
+		p {
+			font-size: 16px;
+		}
+
+	}
+
+	&.section-grey {
+		background: #F8F8FB;
+	}
+	color: $primary-text-color;
+	.section-download-logo {
+		img {
+			display: block;
+			margin: auto;
+			max-width: 165px;
+			height: auto;
+		}
+	}
+	.section-title {
+		margin-top: .75em;
+		font-size: $font-size-h1-small;
+		font-weight: bold;
+		margin-bottom: 0.1em;
+	}
+	.button {
+		margin-top: 1.25em;
+	}
+}
+
+.section-donate {
+	input[type="image"] {
+		margin-top: 10px;
+		max-width: 190px;
+		height: auto;
+	}
+}
+
+.blog-page,
+.page-downloads {
+	.page-header {
+		@media screen and (min-width: 64.063em) {
+			padding-top: 130px;
+			.page-header-logo {
+				max-width: 120px;
+			}
+		}
+	}
+}

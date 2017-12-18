@@ -1,0 +1,64 @@
+.site-footer {
+	font-size: 18px;
+	background: #3E434D;
+	clear: both;
+	color: $footer-color;
+	padding: 35px 0;
+	padding-left:15px;
+	@media screen and (min-width: 64.063em) {
+		padding: 50px 0;
+		font-size: 18px;
+	}
+
+	.col-right {
+		float: right;
+		font-size: 16px;
+		margin-bottom: 20px;
+		@media screen and (min-width: 64.063em) {
+			margin-bottom: 0;
+			text-align: right;
+			font-size: 18px;
+		}
+	}
+}
+
+.footer-nav {
+	overflow: hidden;
+	text-align: left;
+	@media screen and (min-width: 64.063em) {
+		float: right;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		display: block;
+		margin-bottom: 25px;
+	}
+	a {
+		font-size: 16px;
+		color: $secondary-color;
+		transition: 0.3s color;
+		&:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+		@media screen and (min-width: 64.063em) {
+			font-size: 18px;
+		}
+
+	}
+	@media screen and (min-width: 64.063em) {
+		li {
+			text-align: right;
+			float: left;
+			margin-left: 50px;
+			margin-bottom: 0;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+	}
+}
