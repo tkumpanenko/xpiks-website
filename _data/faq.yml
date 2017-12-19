@@ -1,7 +1,3 @@
-- title: 'Autocompletion does not work though "Autocomplete keywords" option is ON'
-  content: >
-    Please check if you have Xpiks "installed" in some sort of cloud storage like Google Drive, Dropbox etc. Move it to the local hard drive (it "weights" nothing anyway) and try again. Go to support if the problem persists.
-
 - title: 'I downloaded <i>Xpiks-qt-v1.1.4.zip</i> and what the hell I have to do next?'
   content: >
     Xpiks will have an installer for Windows soon. Meanwhile extract zip archive to any place you want to (e.g. <code class="highlighter-rouge">C:\</code>), go inside and double-click the file <strong>xpiks-qt.exe</strong>
@@ -14,6 +10,15 @@
 - title: '"Import/Export finished with errors. See logs for details."'
   content: >
     Usually this error appears if Xpiks fails to find Exiftool. If you didn't install it, please visit <a href="http://www.sno.phy.queensu.ca/~phil/exiftool/" target="_blank">Official Exiftool Website</a> and install it. If you have Exiftool installed and still you see this error, then please go in Xpiks to Settings -> External and select correct path to `exiftool` executable (for example, if it's <code class="highlighter-rouge">/usr/bin/exiftool</code> try to change it to <code class="highlighter-rouge">/usr/local/bin/exiftool</code> and vice versa)
+
+- title: >
+    I can't upload via FTP to my favorite stock XYZ
+  content: >
+    First of all, check if you didn't make a typo in a Host, Username and Password field. Use "Show Password" checkbox to see if you typed it correctly. Try to use "Test connection" button before upload and see if it works. Try to login with and without Passive Mode (in the Advanced tab). Read help in your stock XYZ about how to upload artworks.
+
+- title: 'Autocompletion does not work though "Autocomplete keywords" option is ON'
+  content: >
+    Please check if you have Xpiks "installed" in some sort of cloud storage like Google Drive, Dropbox etc. Move it to the local hard drive (it "weights" nothing anyway) and try again. Go to support if the problem persists.
 
 - title: 'Replace misspelled keywords does nothing'
   content: >
@@ -28,8 +33,4 @@
     1. Press "windows" button, search for "environmental variables", select "Edit system environmental variables".
     2. In the upper section "Add new variable". For a variable name use <code class="highlighter-rouge">QT_DEVICE_PIXEL_RATIO</code> and for it's value use "2" (without quotes as well). Press "Ok", "Apply" or what ever you need to save and quit.
     3. Open Xpiks
-
-- title: >
-    I can't upload via FTP to my favorite stock XYZ
-  content: >
-    First of all, check if you didn't make a typo in a Host, Username and Password field. Use "Show Password" checkbox to see if you typed it correctly. Try to use "Test connection" button before upload and see if it works. Try to login with and without Passive Mode (in the Advanced tab). Read help in your stock XYZ about how to upload artworks.
+    
