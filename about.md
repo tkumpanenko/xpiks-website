@@ -1,6 +1,6 @@
 ---
-layout: default
-title: about
+layout: page
+title: About us
 permalink: /about/
 body_class: "page-blog"
 ---
