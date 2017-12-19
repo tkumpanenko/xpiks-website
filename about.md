@@ -5,6 +5,8 @@ permalink: /about/
 body_class: "page-blog"
 ---
 
+{% include header.html %}
+
 <div class="row">
 	<div class="small-12">
 		<div class="single-post">
