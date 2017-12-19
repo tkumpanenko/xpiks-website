@@ -11,7 +11,6 @@ body_class: "page-blog"
 	<div class="small-12">
 		<div class="single-post">
 			<div class="post-item">
-				<h2>About us</h2>
 				<div class="post-content">
            <p> Xpiks is a free and open source keywording and uploading tool for microstock photographers and illustrators. It was written from scratch with aim to make it more usefull, convenient and quicker than existing tools.
            </p>
