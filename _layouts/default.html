@@ -12,8 +12,11 @@
         {{ content }}
       </div>
 
-      {% if page.free_download %}
+      {% if page.free_download or layout.free_download %}
         {% assign free_download_class = page.free_download_class %}
+        {% if layout.free_download_class %}
+          {% assign free_download_class = layout.free_download_class %}
+        {% endif %}
         {% include free-download.html class=free_download_class %}
       {% endif %}
 
