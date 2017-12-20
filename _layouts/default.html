@@ -13,7 +13,8 @@
       </div>
 
       {% if page.free_download %}
-        {% include free-download.html class="section-grey" %}
+        {% assign free_download_class = page.free_download_class %}
+        {% include free-download.html class=free_download_class %}
       {% endif %}
 
       {% include footer.html %}
